@@ -7,7 +7,7 @@ async function createMessage() {
   const message = await client.messages.create({
     body: "Need urgent HELP!!!!",
     from: "+17693055216",
-    to: "+916387619888",
+    to: "+xxxxxxxxxx",
   });
 
   console.log(message.body);
