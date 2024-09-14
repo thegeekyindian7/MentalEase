@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professionals</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      nav {
+        background-color: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .professionals-section {
+        background: url("assets/nature.jpg") no-repeat center center/cover;
+        padding: 50px;
+
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+        position: relative;
+      }
+
+      .sos-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+
+      .sos-btn:hover {
+        background-color: darkred;
+      }
+
+      .differences {
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        background-color: #3da5408e;
+      }
+
+      .differences h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .differences h1 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .differences table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-bottom: 30px;
+        background: linear-gradient(145deg, #328181, #3da5408e);
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .differences th,
+      .differences td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #fff;
+      }
+
+      .differences th {
+        background-color: #328181;
+        font-size: 18px;
+        border-radius: 15px 15px 0 0;
+      }
+
+      .differences tr:nth-child(even) {
+        background-color: #3a7d7d;
+      }
+
+      .differences tr:hover {
+        background-color: #328181;
+        color: #fff;
+      }
+
+      .differences td {
+        background-color: #3da5408e;
+        color: white;
+      }
+
+      .professionals-filter {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .professionals-filter label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+        color: #fff;
+      }
+
+      select {
+        padding: 15px;
+        font-size: 16px;
+        border-radius: 12px;
+        border: 2px solid #fff;
+        outline: none;
+        color: #333;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      select:hover {
+        background-color: #328181;
+        color: #fff;
+      }
+
+      .professionals-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        width: calc(33.33% - 20px);
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        margin: 10px 0;
+        color: #328181;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .card p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      footer {
+        background-color: #328181;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+        border-top: 5px solid #3da5408e;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">MentalEase</div>
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+        <a href="about.html">Community</a>
+        <a href="act.html">Activities</a>
+        <a href="co.html">Need a Professional?</a>
+      </div>
+    </nav>
+
+    <div class="differences">
+      <div class="professionals-section">
+        <button class="sos-btn" onclick="handleSOS()">SOS</button>
+        <h1>Find a Professional</h1>
+        <h2>Understand the Difference for Proper Decision Making</h2>
+        <table>
+          <tr>
+            <th>Profession</th>
+            <th>Role</th>
+          </tr>
+          <tr>
+            <td>Psychologist</td>
+            <td>
+              Diagnoses and treats mental disorders, may offer therapy, but
+              cannot prescribe medication.
+            </td>
+          </tr>
+          <tr>
+            <td>Counselor</td>
+            <td>
+              Provides talk therapy to help cope with emotional and mental
+              challenges.
+            </td>
+          </tr>
+          <tr>
+            <td>Psychiatrist</td>
+            <td>
+              Medical doctor specializing in mental health, can prescribe
+              medication and provide therapy.
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br />
+      <div class="professionals-filter">
+        <label for="city">Select Your City:</label>
+        <select id="city" onchange="filterProfessionals()">
+          <option value="all">All Cities</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+          <option value="chennai">Chennai</option>
+        </select>
+      </div>
+
+      <div class="professionals-cards" id="professionals-cards">
+        <div class="card" data-city="mumbai">
+          <img src="assets/p1.jpg" alt="Professional 1" />
+          <h3>Dr. Aditya Verma</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p6.jpg" alt="Professional 2" />
+          <h3>Ms. Kavya Rao</h3>
+          <p>Counselor</p>
+          <p>Phone: +91 9123456789</p>
+          <p>Delhi</p>
+        </div>
+        <div class="card" data-city="chennai">
+          <img src="assets/p3.jpg" alt="Professional 3" />
+          <h3>Dr. Suresh Patil</h3>
+          <p>Psychiatrist</p>
+          <p>Phone: +91 9234567890</p>
+          <p>Chennai</p>
+        </div>
+        <div class="card" data-city="chennai">
+          <img src="assets/p4.jpg" alt="Professional 4" />
+          <h3>Dr. Ananya Singh</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9988776655</p>
+          <p>Chennai</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p5.jpg" alt="Professional 5" />
+          <h3>Ms. Shalini Desai</h3>
+          <p>Counselor</p>
+          <p>Phone: +91 9865432109</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p11.jpg" alt="Professional 6" />
+          <h3>Dr. Priya Kulkarni</h3>
+          <p>Psychiatrist</p>
+          <p>Phone: +91 9876543211</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p10.jpg" alt="Professional 7" />
+          <h3>Mr. Rohan Ahuja</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9123456788</p>
+          <p>Delhi</p>
+        </div>
+        <div class="card" data-city="chennai">
+          <img src="assets/p12.jpg" alt="Professional 8" />
+          <h3>Dr. Meera Kapoor</h3>
+          <p>Psychiatrist</p>
+          <p>Phone: +91 9234567889</p>
+          <p>Chennai</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p7.jpg" alt="Professional 9" />
+          <h3>Dr. Rajesh Sharma</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9988776654</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p13.jpg" alt="Professional 10" />
+          <h3>Ms. Ritu Joshi</h3>
+          <p>Counselor</p>
+          <p>Phone: +91 9865432108</p>
+          <p>Delhi</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p9.jpg" alt="Professional 11" />
+          <h3>Dr. Anil Gupta</h3>
+          <p>Psychiatrist</p>
+          <p>Phone: +91 9876543212</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p8.png" alt="Professional 12" />
+          <h3>Mr. Vikram Sethi</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9123456787</p>
+          <p>Delhi</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p14.jpg" alt="Professional 13" />
+          <h3>Ms. Aarti Deshmukh</h3>
+          <p>Counselor</p>
+          <p>Phone: +91 9234567888</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p15.jpg" alt="Professional 14" />
+          <h3>Dr. Neha Jain</h3>
+          <p>Psychiatrist</p>
+          <p>Phone: +91 9988776653</p>
+          <p>Delhi</p>
+        </div>
+        <div class="card" data-city="mumbai">
+          <img src="assets/p16.jpg" alt="Professional 15" />
+          <h3>Ms. Shruti Mehta</h3>
+          <p>Counselor</p>
+          <p>Phone: +91 9865432107</p>
+          <p>Mumbai</p>
+        </div>
+        <div class="card" data-city="delhi">
+          <img src="assets/p2.jpg" alt="Professional 16" />
+          <h3>Mr. Arjun Malhotra</h3>
+          <p>Psychologist</p>
+          <p>Phone: +91 9123456786</p>
+          <p>Delhi</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 MentalEase. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function filterProfessionals() {
+        const selectedCity = document.getElementById("city").value;
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          if (selectedCity === "all" || card.dataset.city === selectedCity) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      function handleSOS() {
+        fetch("/send-sos", {
+          method: "POST",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("SOS message sent! Please wait for assistance.");
+            } else {
+              alert("Failed to send SOS. Please try again.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("SOS SENT");
+          });
+      }
+      filterProfessionals();
+    </script>
+  </body>
+</html>

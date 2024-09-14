@@ -1,0 +1,20 @@
+{
+  "name": "mentalease",
+  "version": "1.0.0",
+  "description": "Project Theme- Healthcare This is a project geeksforgeeks google hackathon. MENTAL HEALTH AWARENESS ***Need of the project?*** Maintaining a positive mental health and treating any mental health conditions  is crucial to stabilizing constructive behaviors, emotions, and thoughts.  Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships. Poor mental health will not only impact your body's ability to make healthy decisions, but it can also increase your risk of chronic diseases like heart disease and other health complications like obesity, weakened immune system, and more.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "apex",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4",
+    "twilio": "^5.3.0"
+  },
+  "devDependencies": {}
+}
