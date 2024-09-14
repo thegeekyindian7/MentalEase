@@ -9,7 +9,7 @@ const callSOS = (req, res) => {
     .create({
       body: "Need urgent HELP!!!!",
       from: "+17693055216", // Your Twilio registered number
-      to: "+916387619888", // Destination number
+      to: "+xxxxxxxxxx", // Destination number
     })
     .then((message) => res.json({ success: true, message: message.sid }))
     .catch((error) => {
